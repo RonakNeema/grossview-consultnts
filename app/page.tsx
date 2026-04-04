@@ -42,13 +42,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Expert{" "}
-              <span className="gradient-text">Real Estate Bookkeeping</span>,
-              Property Accounting & Financial Analysis
+              Complete Support for{" "}
+              <span className="gradient-text">Property Accounting</span>,
+              Real Estate Bookkeeping and Financial Analysis Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Expert Real estate bookkeeping, Property Accounting and Financial Analysis services 
-              tailored for property management companies and real estate professionals.
+              tailored for property management firms, real estate private equity firms, developers, 
+              fund managers and brokerages.
             </p>
             <div className="flex flex-wrap justify-center gap-8 mb-10">
               <div className="text-center">
@@ -103,14 +104,14 @@ export default function Home() {
                 description: "Homeowners associations and community management"
               },
               {
-                title: "Multifamily",
-                icon: "🏬",
-                description: "Apartment complexes and multifamily residential properties"
-              },
-              {
                 title: "Residential",
                 icon: "🏠",
-                description: "Single-family homes and residential real estate"
+                description: "Single-family homes, multifamily apartments, and other residential real estate"
+              },
+              {
+                title: "Industrial",
+                icon: "🏭",
+                description: "Warehouses, manufacturing units, and other industrial properties"
               }
             ].map((field, index) => (
               <div
@@ -162,15 +163,15 @@ export default function Home() {
                 icon: "📄"
               },
               {
-                title: "Accounts Payable",
-                description: "Complete accounts payable management ensuring timely vendor payments and accurate tracking.",
+                title: "Accounts Payable & Receivable",
+                description: "Accounts payable management, tracking timely vendor payments, receipt posting and tracking tenant collection.",
                 icon: "💳"
               },
-              {
-                title: "Accounts Receivable",
-                description: "Comprehensive accounts receivable services to optimize cash flow and tenant collections.",
-                icon: "💰"
-              },
+              // {
+              //   title: "Accounts Receivable",
+              //   description: "Receipt posting and tracking tenant collection.",
+              //   icon: "💰"
+              // },
               {
                 title: "Lease Administration & Abstraction",
                 description: "Extract and organize critical lease data while managing lease lifecycles for informed decision-making.",
@@ -186,10 +187,15 @@ export default function Home() {
                 description: "Comprehensive financial reports that give you clear insights into your property performance.",
                 icon: "📊"
               },
+              // {
+              //   title: "Financial Services",
+              //   description: "Financial analysis, modeling, and consulting to support real estate investment decisions and asset management.",
+              //   icon: "💼"
+              // },
               {
-                title: "Financial Analysis",
-                description: "In-depth financial analysis including model creation, deal underwriting, and asset management.",
-                icon: "📈"
+                title: "Yardi Implementation & Data Transition Support",
+                description: "Configuration and data transition support for commertial real estate. ",
+                icon: "⚙️"
               }
             ].map((service, index) => (
               <div
@@ -206,7 +212,7 @@ export default function Home() {
           </div>
           
           {/* Yardi Implementation & Data Transition Support - Featured */}
-          <div className="mt-12 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-2xl p-8 md:p-12 text-white">
+          {/* <div className="mt-12 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-2xl p-8 md:p-12 text-white">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">Yardi Implementation & Data Transition Support</h3>
@@ -222,7 +228,7 @@ export default function Home() {
                 Learn More
               </a>
             </div>
-          </div>
+          </div> */}
 
           {/* Financial Analysis - Featured */}
           <div className="mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white">
@@ -241,7 +247,7 @@ export default function Home() {
                 },
                 {
                   title: "Deal Underwriting",
-                  description: "Thorough analysis and risk assessment for real estate transactions",
+                  description: "Analysis and risk assessment for real estate transactions",
                   icon: "✅"
                 },
                 {
@@ -272,53 +278,48 @@ export default function Home() {
               Software Expertise
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our India-based team has deep expertise in leading property management and accounting platforms
+             Our India-based team has deep expertise in leading property management and accounting platforms, enabling us to deliver efficient, reliable, and scalable solutions tailored to your business needs.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
             {[
               {
                 name: "Yardi",
-                description: "Full implementation, training, and ongoing support for Yardi Voyager and other Yardi products.",
-                color: "from-blue-500 to-blue-700"
+                logo: "/images/yardi-logo.png"
               },
               {
                 name: "AppFolio",
-                description: "Complete AppFolio setup and bookkeeping services for property managers.",
-                color: "from-green-500 to-green-700"
+                logo: "/images/appfolio-logo.png"
               },
               {
                 name: "QuickBooks",
-                description: "QuickBooks integration and management for real estate accounting needs.",
-                color: "from-emerald-500 to-teal-700"
+                logo: "/images/quickbooks-logo.png"
               },
               {
                 name: "Entrata",
-                description: "Expert Entrata configuration and property management solutions.",
-                color: "from-indigo-500 to-indigo-700"
+                logo: "/images/entrata-logo.png"
               },
               {
                 name: "Buildium",
-                description: "Buildium setup, training, and comprehensive property management support.",
-                color: "from-orange-500 to-orange-700"
+                logo: "/images/buildium-logo.png"
               },
               {
                 name: "Real Page",
-                description: "Real Page implementation and optimization for property operations.",
-                color: "from-purple-500 to-purple-700"
+                logo: "/images/realpage-logo.png"
               }
             ].map((software, index) => (
               <div
                 key={index}
-                className="text-center p-8 rounded-xl border-2 border-gray-100 hover:border-[var(--accent)] transition-all"
+                className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-gray-100 hover:border-[var(--accent)] transition-all bg-white"
               >
-                <div className={`w-20 h-20 bg-gradient-to-br ${software.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                  <span className="text-white text-2xl font-bold">{software.name.charAt(0)}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-[var(--primary)] mb-3">
-                  {software.name}
-                </h3>
-                <p className="text-gray-600">{software.description}</p>
+                <Image
+                  src={software.logo}
+                  alt={software.name}
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto object-contain mb-2"
+                />
+                <p className="text-sm font-medium text-[var(--primary)] text-center">{software.name}</p>
               </div>
             ))}
           </div>
@@ -334,18 +335,15 @@ export default function Home() {
                 About GrossView Consultants
               </h2>
               <p className="text-gray-600 mb-6 text-lg">
-                GrossView Consultants is a real estate KPO and outsourcing firm specializing in property 
-                accounting, real estate bookkeeping, and financial analysis. With over 8 years of industry 
-                experience, we support property managers and real estate businesses globally.
+                GrossView Consultants is a real estate KPO and outsourcing firm specializing in property accounting, real estate bookkeeping, and financial analysis. With over 8 years of industry experience, we support property managers and real estate businesses globally.
               </p>
               <p className="text-gray-600 mb-8 text-lg">
-                Our strength lies in a skilled team and structured workflows that ensure accuracy, 
-                consistency, and efficiency across real estate operations and investments. Backed by 
-                strong industry knowledge and expertise in platforms like Yardi, AppFolio, QuickBooks, 
-                Entrata, Buildium, and Real Page, we deliver reliable solutions tailored to the real 
-                estate sector.
+                Our strength lies in a skilled team and structured workflows that ensure accuracy, consistency, and efficiency across real estate operations and investments. Backed by strong industry knowledge, we deliver reliable solutions tailored to the real estate sector.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              <p className="text-gray-600 mb-8 text-lg">
+                With expertise in platforms like Yardi, AppFolio, and QuickBooks, we help businesses streamline processes, reduce costs, and scale with confidence.
+              </p>
+              {/* <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-xl shadow-md">
                   <div className="text-3xl font-bold gradient-text mb-2">8+</div>
                   <div className="text-gray-600">Years of Experience</div>
@@ -354,10 +352,10 @@ export default function Home() {
                   <div className="text-3xl font-bold gradient-text mb-2">5+</div>
                   <div className="text-gray-600">Satisfied Clients</div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] rounded-2xl p-10 text-white">
-              <h3 className="text-2xl font-semibold mb-6">Why Choose Us?</h3>
+              <h3 className="text-2xl font-bold mb-6">Why Choose Us?</h3>
               <ul className="space-y-4">
                 {[
                   "Expert team with real estate industry experience",
@@ -371,7 +369,7 @@ export default function Home() {
                     <svg className="w-6 h-6 text-[var(--accent)] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-200">{item}</span>
+                    <span className="text-gray-200 font-bold">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -389,10 +387,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Streamline Your Property Accounting?
+              Schedule a Real Estate Consultation call Today.
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8 text-lg">
-              Let GrossView Consultants handle your bookkeeping needs so you can focus on growing your business.
+              Let GrossView Consultants handle your offshore real estate needs so you can focus on growing your business.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
@@ -435,7 +433,7 @@ export default function Home() {
               <p className="text-gray-300 max-w-md">
                 Real estate KPO and outsourcing firm specializing in property accounting, 
                 real estate bookkeeping, and financial analysis services. 
-                Your trusted global partner for all property financial needs.
+                Your trusted global partner for all offshore real estate services needs.
               </p>
             </div>
             <div>
