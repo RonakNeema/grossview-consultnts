@@ -42,13 +42,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Complete Support for{" "}
-              <span className="gradient-text">Property Accounting</span>{" "}
-              & Real Estate Bookkeeping
+              Expert{" "}
+              <span className="gradient-text">Real Estate Bookkeeping</span>,
+              Property Accounting & Financial Analysis
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Expert bookkeeping and financial services tailored for property management 
-              companies and real estate professionals.
+              Expert Real estate bookkeeping, Property Accounting and Financial Analysis services 
+              tailored for property management companies and real estate professionals.
             </p>
             <div className="flex flex-wrap justify-center gap-8 mb-10">
               <div className="text-center">
@@ -79,6 +79,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Real Estate Fields Section */}
+      <section id="fields" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">
+              Real Estate Fields We Serve
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Specialized expertise across diverse real estate sectors
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Commercial Real Estate",
+                icon: "🏢",
+                description: "Office buildings, retail centers, and commercial properties"
+              },
+              {
+                title: "HOA",
+                icon: "🏘️",
+                description: "Homeowners associations and community management"
+              },
+              {
+                title: "Multifamily",
+                icon: "🏬",
+                description: "Apartment complexes and multifamily residential properties"
+              },
+              {
+                title: "Residential",
+                icon: "🏠",
+                description: "Single-family homes and residential real estate"
+              }
+            ].map((field, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100 text-center"
+              >
+                <div className="text-5xl mb-4">{field.icon}</div>
+                <h3 className="text-xl font-semibold text-[var(--primary)] mb-3">
+                  {field.title}
+                </h3>
+                <p className="text-gray-600">{field.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +136,7 @@ export default function Home() {
               Our Services
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive property accounting and bookkeeping solutions for real estate professionals
+              Comprehensive property accounting, bookkeeping and Financial Analysis solutions for Real Estate Industry
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,13 +147,33 @@ export default function Home() {
                 icon: "📚"
               },
               {
+                title: "Property Accounting",
+                description: "Full-service property accounting tailored to real estate management requirements.",
+                icon: "🏠"
+              },
+              {
                 title: "Bank Reconciliation",
                 description: "Monthly bank reconciliation to ensure your accounts are accurate and identify discrepancies quickly.",
                 icon: "🏦"
               },
               {
-                title: "Lease Abstraction",
-                description: "Extract and organize critical lease data for easy access and informed decision-making.",
+                title: "Invoice Processing",
+                description: "Efficient invoice processing and management to streamline your accounts payable workflow.",
+                icon: "📄"
+              },
+              {
+                title: "Accounts Payable",
+                description: "Complete accounts payable management ensuring timely vendor payments and accurate tracking.",
+                icon: "💳"
+              },
+              {
+                title: "Accounts Receivable",
+                description: "Comprehensive accounts receivable services to optimize cash flow and tenant collections.",
+                icon: "💰"
+              },
+              {
+                title: "Lease Administration & Abstraction",
+                description: "Extract and organize critical lease data while managing lease lifecycles for informed decision-making.",
                 icon: "📋"
               },
               {
@@ -118,9 +187,9 @@ export default function Home() {
                 icon: "📊"
               },
               {
-                title: "Property Accounting",
-                description: "Full-service property accounting tailored to real estate management requirements.",
-                icon: "🏠"
+                title: "Financial Analysis",
+                description: "In-depth financial analysis including model creation, deal underwriting, and asset management.",
+                icon: "📈"
               }
             ].map((service, index) => (
               <div
@@ -136,14 +205,14 @@ export default function Home() {
             ))}
           </div>
           
-          {/* Yardi Implementation Support - Featured */}
+          {/* Yardi Implementation & Data Transition Support - Featured */}
           <div className="mt-12 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] rounded-2xl p-8 md:p-12 text-white">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-1">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">Yardi Implementation Support</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Yardi Implementation & Data Transition Support</h3>
                 <p className="text-gray-300 text-lg">
-                  Expert assistance with Yardi software setup, configuration, and ongoing support. 
-                  We help you maximize your property management software investment.
+                  Expert functional assistance with Yardi software setup, configuration, data migration, and ongoing support. 
+                  We help you maximize your property management software investment with seamless transitions.
                 </p>
               </div>
               <a
@@ -152,6 +221,44 @@ export default function Home() {
               >
                 Learn More
               </a>
+            </div>
+          </div>
+
+          {/* Financial Analysis - Featured */}
+          <div className="mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Financial Analysis Services</h3>
+              <p className="text-gray-200 text-lg max-w-3xl mx-auto">
+                Comprehensive financial analysis to drive informed investment decisions and maximize property performance
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Model Creation",
+                  description: "Build detailed financial models for property valuation and investment analysis",
+                  icon: "📐"
+                },
+                {
+                  title: "Deal Underwriting",
+                  description: "Thorough analysis and risk assessment for real estate transactions",
+                  icon: "✅"
+                },
+                {
+                  title: "Asset Management",
+                  description: "Ongoing performance monitoring and optimization strategies",
+                  icon: "📊"
+                }
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition-all"
+                >
+                  <div className="text-4xl mb-3">{service.icon}</div>
+                  <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
+                  <p className="text-gray-200 text-sm">{service.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -165,10 +272,10 @@ export default function Home() {
               Software Expertise
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We are certified experts in the leading property management and accounting platforms
+              Our India-based team has deep expertise in leading property management and accounting platforms
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "Yardi",
@@ -184,6 +291,21 @@ export default function Home() {
                 name: "QuickBooks",
                 description: "QuickBooks integration and management for real estate accounting needs.",
                 color: "from-emerald-500 to-teal-700"
+              },
+              {
+                name: "Entrata",
+                description: "Expert Entrata configuration and property management solutions.",
+                color: "from-indigo-500 to-indigo-700"
+              },
+              {
+                name: "Buildium",
+                description: "Buildium setup, training, and comprehensive property management support.",
+                color: "from-orange-500 to-orange-700"
+              },
+              {
+                name: "Real Page",
+                description: "Real Page implementation and optimization for property operations.",
+                color: "from-purple-500 to-purple-700"
               }
             ].map((software, index) => (
               <div
@@ -212,15 +334,16 @@ export default function Home() {
                 About GrossView Consultants
               </h2>
               <p className="text-gray-600 mb-6 text-lg">
-                At GrossView Consultants, we specialize in providing comprehensive property 
-                accounting and real estate bookkeeping services. With over 8 years of experience, 
-                we understand the unique financial challenges faced by property managers and 
-                real estate professionals.
+                GrossView Consultants is a real estate KPO and outsourcing firm specializing in property 
+                accounting, real estate bookkeeping, and financial analysis. With over 8 years of industry 
+                experience, we support property managers and real estate businesses globally.
               </p>
               <p className="text-gray-600 mb-8 text-lg">
-                Our team of experts is proficient in leading property management software 
-                including Yardi, AppFolio, and QuickBooks, ensuring seamless integration 
-                with your existing systems.
+                Our strength lies in a skilled team and structured workflows that ensure accuracy, 
+                consistency, and efficiency across real estate operations and investments. Backed by 
+                strong industry knowledge and expertise in platforms like Yardi, AppFolio, QuickBooks, 
+                Entrata, Buildium, and Real Page, we deliver reliable solutions tailored to the real 
+                estate sector.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-xl shadow-md">
@@ -238,11 +361,11 @@ export default function Home() {
               <ul className="space-y-4">
                 {[
                   "Expert team with real estate industry experience",
-                  "Proficient in Yardi, AppFolio & QuickBooks",
-                  "Accurate and timely financial reporting",
                   "Dedicated support and personalized service",
-                  "Cost-effective solutions for all property sizes",
-                  "Secure and confidential data handling"
+                  "Cost-effective solutions (save up to 65% cost)",
+                  "Secure and confidential data handling",
+                  "Scalability (based on your requirements)",
+                  "Focus on high value business growth opportunities"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <svg className="w-6 h-6 text-[var(--accent)] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -310,27 +433,34 @@ export default function Home() {
                 />
               </div>
               <p className="text-gray-300 max-w-md">
-                Offering complete support for property accounting & real estate bookkeeping services. 
-                Your trusted partner for all property financial needs.
+                Real estate KPO and outsourcing firm specializing in property accounting, 
+                real estate bookkeeping, and financial analysis services. 
+                Your trusted global partner for all property financial needs.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-lg">Services</h4>
-              <ul className="space-y-2 text-gray-300">
+              <ul className="space-y-2 text-gray-300 text-sm">
                 <li>Bookkeeping</li>
+                <li>Property Accounting</li>
                 <li>Bank Reconciliation</li>
-                <li>Lease Abstraction</li>
+                <li>Invoice Processing</li>
+                <li>Accounts Payable/Receivable</li>
+                <li>Lease Administration</li>
                 <li>CAM Reconciliation</li>
                 <li>Financial Reporting</li>
-                <li>Property Accounting</li>
+                <li>Financial Analysis</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-lg">Software</h4>
-              <ul className="space-y-2 text-gray-300">
+              <ul className="space-y-2 text-gray-300 text-sm">
                 <li>Yardi</li>
                 <li>AppFolio</li>
                 <li>QuickBooks</li>
+                <li>Entrata</li>
+                <li>Buildium</li>
+                <li>Real Page</li>
               </ul>
               <h4 className="font-semibold mb-4 mt-6 text-lg">Contact</h4>
               <ul className="space-y-2 text-gray-300">

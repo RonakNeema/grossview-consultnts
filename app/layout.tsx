@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "GrossView Consultants | Property Accounting & Real Estate Bookkeeping",
-  description: "GrossView Consultants - Offering complete support for property accounting & real estate bookkeeping services. Experts in Yardi, AppFolio & QuickBooks.",
+  title: "GrossView Consultants | Real Estate Bookkeeping, Property Accounting & Financial Analysis",
+  description: "Expert Real estate bookkeeping, Property Accounting and Financial Analysis services tailored for property management companies and real estate professionals. Experts in Yardi, AppFolio, QuickBooks, Entrata, Buildium & Real Page.",
 };
 
 export default function RootLayout({
