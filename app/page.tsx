@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navigation from "./components/Navigation";
 import ContactForm from "./components/ContactForm";
+import { getImagePath } from "./lib/utils";
 
 export default function Home() {
   return (
@@ -398,7 +399,7 @@ export default function Home() {
             <div className="md:col-span-2">
               <div className="bg-white rounded-xl p-4 inline-block mb-4">
                 <Image
-                  src="/images/logo.jpeg"
+                  src={getImagePath("/images/logo.jpeg")}
                   alt="GrossView Consultants"
                   width={180}
                   height={70}
