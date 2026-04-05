@@ -139,28 +139,30 @@ ${formData.comments}
 
       {/* Modal Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start sm:items-center justify-center overflow-y-auto" onClick={() => setIsOpen(false)}>
-          <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl my-4 mx-4 sm:my-6 sm:mx-6" onClick={(e) => e.stopPropagation()}>
-            {/* Header */}
-            <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-4 sm:px-6 py-4 flex justify-between items-center rounded-t-xl">
-              <div className="flex-1 min-w-0 pr-3">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto"
+          onClick={() => setIsOpen(false)}
+        >
+          <div className="min-h-full flex items-center justify-center p-4">
+            <div 
+              className="bg-white rounded-xl shadow-2xl w-full max-w-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-4 py-4 flex justify-between items-center rounded-t-xl">
                 <h3 className="text-lg sm:text-xl font-bold text-white">
                   Request a Consultation
                 </h3>
-                <p className="text-xs text-gray-200 mt-0.5 hidden sm:block">
-                  We&apos;ll respond within 24 hours
-                </p>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-white hover:text-gray-200 p-1 -mr-1"
+                  aria-label="Close"
+                >
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-white hover:text-gray-200 transition-colors p-1 flex-shrink-0"
-                aria-label="Close"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="p-4 sm:p-6">
@@ -351,6 +353,7 @@ ${formData.comments}
                 </button>
               </div>
             </form>
+            </div>
           </div>
         </div>
       )}
