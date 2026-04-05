@@ -260,27 +260,27 @@ export default function Home() {
             {[
               {
                 name: "Yardi",
-                logo: "/images/yardi-logo.png"
+                logo: getImagePath("/images/yardi-logo.png")
               },
               {
                 name: "AppFolio",
-                logo: "/images/appfolio-logo.png"
+                logo: getImagePath("/images/appfolio-logo.png")
               },
               {
                 name: "QuickBooks",
-                logo: "/images/quickbooks-logo.png"
+                logo: getImagePath("/images/quickbooks-logo.png")
               },
               {
                 name: "Entrata",
-                logo: "/images/entrata-logo.png"
+                logo: getImagePath("/images/entrata-logo.png")
               },
               {
                 name: "Buildium",
-                logo: "/images/buildium-logo.png"
+                logo: getImagePath("/images/buildium-logo.png")
               },
               {
                 name: "Real Page",
-                logo: "/images/realpage-logo.png"
+                logo: getImagePath("/images/realpage-logo.png")
               }
             ].map((software, index) => (
               <div
