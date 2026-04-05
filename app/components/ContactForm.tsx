@@ -139,35 +139,35 @@ ${formData.comments}
 
       {/* Modal Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-3 sm:p-4" onClick={() => setIsOpen(false)}>
-          <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[95vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 sm:p-6" onClick={() => setIsOpen(false)}>
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[92vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-3 sm:px-6 py-3 sm:py-4 flex justify-between items-center rounded-t-xl">
-              <div className="flex-1 min-w-0 pr-2">
-                <h3 className="text-sm sm:text-base md:text-xl font-bold text-white">
+            <div className="sticky top-0 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-4 sm:px-6 py-4 sm:py-5 flex justify-between items-center rounded-t-xl">
+              <div className="flex-1 min-w-0 pr-3">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-white leading-tight">
                   Request a Consultation
                 </h3>
-                <p className="text-[10px] sm:text-xs text-gray-200 mt-0.5 hidden sm:block">
+                <p className="text-xs sm:text-sm text-gray-200 mt-1 hidden sm:block">
                   We'll respond within 24 hours
                 </p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:text-gray-200 transition-colors p-1.5 flex-shrink-0"
+                className="text-white hover:text-gray-200 transition-colors p-2 flex-shrink-0"
                 aria-label="Close"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="p-4 sm:p-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <form onSubmit={handleSubmit} className="p-5 sm:p-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -177,14 +177,14 @@ ${formData.comments}
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
+                    className="w-full px-3 py-2.5 text-base text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
                     placeholder="John Doe"
                   />
                 </div>
 
                 {/* Business Name */}
                 <div>
-                  <label htmlFor="businessName" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="businessName" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Business <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -194,14 +194,14 @@ ${formData.comments}
                     required
                     value={formData.businessName}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
+                    className="w-full px-3 py-2.5 text-base text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
                     placeholder="Company Name"
                   />
                 </div>
 
                 {/* Contact Number */}
                 <div>
-                  <label htmlFor="contactNumber" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="contactNumber" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Phone <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -211,14 +211,14 @@ ${formData.comments}
                     required
                     value={formData.contactNumber}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
+                    className="w-full px-3 py-2.5 text-base text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
 
                 {/* Timezone */}
                 <div>
-                  <label htmlFor="timezone" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="timezone" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Timezone <span className="text-red-500">*</span>
                   </label>
                   <select
@@ -227,7 +227,7 @@ ${formData.comments}
                     required
                     value={formData.timezone}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
+                    className="w-full px-3 py-2.5 text-base text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all"
                   >
                     <option value="">Select...</option>
                     {timezones.map((tz) => (
@@ -240,14 +240,14 @@ ${formData.comments}
               </div>
 
               {/* Services Needed - Multi-select Dropdown */}
-              <div className="relative mt-3" ref={dropdownRef}>
-                <label className="block text-xs font-medium text-gray-700 mb-1">
+              <div className="relative mt-4" ref={dropdownRef}>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
                   Services <span className="text-red-500">*</span>
                 </label>
                 <button
                   type="button"
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                  className="w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all text-left flex justify-between items-center min-h-[38px]"
+                  className="w-full px-3 py-2.5 text-base text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all text-left flex justify-between items-center min-h-[42px]"
                 >
                   <span className={`${formData.services.length === 0 ? 'text-gray-400' : 'text-gray-900'} truncate pr-2`}>
                     {formData.services.length === 0 
@@ -255,17 +255,17 @@ ${formData.comments}
                       : formData.services.join(', ')
                     }
                   </span>
-                  <svg className={`w-4 h-4 transition-transform flex-shrink-0 ${servicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-5 h-5 transition-transform flex-shrink-0 ${servicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 
                 {servicesDropdownOpen && (
-                  <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-48 overflow-y-auto">
+                  <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-52 overflow-y-auto">
                     {services.map((service) => (
                       <label
                         key={service}
-                        className="flex items-center gap-2 px-3 py-1.5 hover:bg-gray-50 cursor-pointer text-sm"
+                        className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 cursor-pointer"
                       >
                         <input
                           type="checkbox"
@@ -273,7 +273,7 @@ ${formData.comments}
                           onChange={() => handleServiceToggle(service)}
                           className="w-4 h-4 text-[var(--accent)] border-gray-300 rounded focus:ring-2 focus:ring-[var(--accent)]"
                         />
-                        <span className="text-gray-900 text-xs">{service}</span>
+                        <span className="text-gray-900 text-sm">{service}</span>
                       </label>
                     ))}
                   </div>
@@ -281,9 +281,9 @@ ${formData.comments}
               </div>
 
               {/* Business Details & Comments in one row on desktop, stacked on mobile */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                 <div>
-                  <label htmlFor="businessDetails" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="businessDetails" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Business Details <span className="text-red-500">*</span>
                   </label>
                   <textarea
@@ -293,13 +293,13 @@ ${formData.comments}
                     value={formData.businessDetails}
                     onChange={handleChange}
                     rows={2}
-                    className="w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all resize-none"
+                    className="w-full px-3 py-2.5 text-base text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all resize-none"
                     placeholder="Property types, units..."
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="comments" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="comments" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Comments
                   </label>
                   <textarea
@@ -308,7 +308,7 @@ ${formData.comments}
                     value={formData.comments}
                     onChange={handleChange}
                     rows={2}
-                    className="w-full px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all resize-none"
+                    className="w-full px-3 py-2.5 text-base text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition-all resize-none"
                     placeholder="Additional info..."
                   />
                 </div>
@@ -316,13 +316,13 @@ ${formData.comments}
 
               {/* Success Message */}
               {submitStatus === 'success' && (
-                <div className="mt-3 bg-green-50 border border-green-200 text-green-800 px-3 py-2 rounded-lg text-sm">
-                  <p className="font-medium">✓ Request sent!</p>
+                <div className="mt-4 bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
+                  <p className="font-medium text-sm">✓ Request sent!</p>
                 </div>
               )}
 
               {/* Footer Buttons */}
-              <div className="mt-4 flex flex-col-reverse sm:flex-row gap-2 sm:justify-end">
+              <div className="mt-5 flex flex-col-reverse sm:flex-row gap-3 sm:justify-end">
                 <button
                   type="button"
                   onClick={() => {
@@ -338,16 +338,16 @@ ${formData.comments}
                     });
                     setIsOpen(false);
                   }}
-                  className="w-full sm:w-auto px-4 py-2 text-sm border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all"
+                  className="w-full sm:w-auto px-5 py-2.5 text-base border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all font-medium"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto gradient-bg text-white px-6 py-2 text-sm rounded-lg font-semibold hover:opacity-90 transition-all disabled:opacity-50 shadow-lg"
+                  className="w-full sm:w-auto gradient-bg text-white px-6 py-2.5 text-base rounded-lg font-semibold hover:opacity-90 transition-all disabled:opacity-50 shadow-lg"
                 >
-                  {isSubmitting ? 'Sending...' : 'Submit'}
+                  {isSubmitting ? 'Sending...' : 'Submit Request'}
                 </button>
               </div>
             </form>
