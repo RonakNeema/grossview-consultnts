@@ -1,40 +1,14 @@
 import Image from "next/image";
+import Navigation from "./components/Navigation";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-24">
-            <div className="flex-shrink-0">
-              <Image
-                src="/images/logo.jpeg"
-                alt="GrossView Consultants"
-                width={220}
-                height={80}
-                className="h-20 w-auto object-contain"
-                priority
-              />
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors font-medium">Services</a>
-              <a href="#software" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors font-medium">Software</a>
-              <a href="#about" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors font-medium">About</a>
-              <a href="#contact" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors font-medium">Contact</a>
-            </div>
-            <a
-              href="#contact"
-              className="gradient-bg text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all font-medium shadow-lg"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-[var(--primary)] text-white py-20 lg:py-28 overflow-hidden">
+      <section  id="hero" className="relative bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-[var(--primary)] text-white py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--accent)] rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
@@ -379,38 +353,39 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-[var(--primary)] relative overflow-hidden">
+      <section id="contact" className="py-12 sm:py-20 bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-[var(--primary)] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--accent)] rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Schedule a Real Estate Consultation call Today.
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
+              Schedule a Real Estate Consultation Today
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto mb-8 text-lg">
+            <p className="text-gray-200 max-w-3xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg px-4">
               Let GrossView Consultants handle your offshore real estate needs so you can focus on growing your business.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
+              <ContactForm />
               <a
                 href="mailto:contact@grossviewconsultants.com"
-                className="gradient-bg text-white px-8 py-4 rounded-full text-lg font-semibold hover:opacity-90 transition-all inline-flex items-center justify-center gap-2"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-white hover:text-[var(--primary)] transition-all inline-flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 Email Us
               </a>
-              <a
+              {/* <a
                 href="tel:+1234567890"
-                className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[var(--primary)] transition-all inline-flex items-center justify-center gap-2"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-white hover:text-[var(--primary)] transition-all inline-flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 Call Now
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
