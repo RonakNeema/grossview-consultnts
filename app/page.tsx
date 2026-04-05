@@ -2,10 +2,12 @@ import Image from "next/image";
 import Navigation from "./components/Navigation";
 import ContactForm from "./components/ContactForm";
 import { getImagePath } from "./lib/utils";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollToTop />
       <Navigation />
 
       {/* Hero Section */}
