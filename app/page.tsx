@@ -11,7 +11,7 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section  id="hero" className="relative bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-[var(--primary)] text-white py-20 lg:py-28 overflow-hidden">
+      <section  id="hero" className="relative bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-[var(--primary)] text-white py-16 sm:py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--accent)] rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
@@ -58,7 +58,7 @@ export default function Home() {
       </section>
 
       {/* Real Estate Fields Section */}
-      <section id="fields" className="py-20">
+      <section id="fields" className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">
@@ -68,7 +68,7 @@ export default function Home() {
               Specialized expertise across diverse real estate sectors
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 title: "Commercial Real Estate",
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">
@@ -117,7 +117,7 @@ export default function Home() {
               Comprehensive property accounting, bookkeeping and Financial Analysis solutions for Real Estate Industry
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 title: "Bookkeeping",
@@ -209,13 +209,13 @@ export default function Home() {
 
           {/* Financial Analysis - Featured */}
           <div className="mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white">
-            <div className="text-center mb-8">
+            <div className="text-center mb-12 sm:mb-16">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Financial Analysis Services</h3>
               <p className="text-gray-200 text-lg max-w-3xl mx-auto">
                 Comprehensive financial analysis to drive informed investment decisions and maximize property performance
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
                   title: "Model Creation",
@@ -248,7 +248,7 @@ export default function Home() {
       </section>
 
       {/* Software Expertise Section */}
-      <section id="software" className="py-20">
+      <section id="software" className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">
@@ -258,7 +258,7 @@ export default function Home() {
              Our India-based team has deep expertise in leading property management and accounting platforms, enabling us to deliver efficient, reliable, and scalable solutions tailored to your business needs.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
             {[
               {
                 name: "Yardi",
@@ -304,9 +304,9 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-6">
                 About GrossView Consultants
@@ -331,7 +331,7 @@ export default function Home() {
                 </div>
               </div> */}
             </div>
-            <div className="bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] rounded-2xl p-10 text-white">
+            <div className="bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] rounded-2xl p-6 sm:p-10 text-white">
               <h3 className="text-2xl font-bold mb-6">Why Choose Us?</h3>
               <ul className="space-y-4">
                 {[
