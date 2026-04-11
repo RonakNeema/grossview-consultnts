@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 
-// TODO: Replace with actual Google Form ID from your Google Form
-const GOOGLE_FORM_ID = 'YOUR_GOOGLE_FORM_ID_HERE';
+// Google Form configuration
+const GOOGLE_FORM_ID = 'e/1FAIpQLScRFyekDV5JbH5fdgxuRIRwl0d0W8t87vebUaHCgI4MXMnGtw';
 const GOOGLE_FORM_EMBED_URL = `https://docs.google.com/forms/d/${GOOGLE_FORM_ID}/viewform?embedded=true`;
 
 export default function ContactForm() {
