@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { getImagePath } from "../lib/utils";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,7 +14,7 @@ export default function Navigation() {
           <div className="flex-shrink-0">
             <a href="#hero" className="flex items-center">
             <Image
-              src={getImagePath("/images/logo.jpeg")}
+              src="/images/logo.jpeg"
               alt="GrossView Consultants"
               width={240}
               height={238}

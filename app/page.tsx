@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Navigation from "./components/Navigation";
 import ContactForm from "./components/ContactForm";
-import { getImagePath } from "./lib/utils";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function Home() {
@@ -262,27 +261,27 @@ export default function Home() {
             {[
               {
                 name: "Yardi",
-                logo: getImagePath("/images/yardi-logo.png")
+                logo: "/images/yardi-logo.png"
               },
               {
                 name: "AppFolio",
-                logo: getImagePath("/images/appfolio-logo.png")
+                logo: "/images/appfolio-logo.png"
               },
               {
                 name: "QuickBooks",
-                logo: getImagePath("/images/quickbooks-logo.png")
+                logo: "/images/quickbooks-logo.png"
               },
               {
                 name: "Entrata",
-                logo: getImagePath("/images/entrata-logo.png")
+                logo: "/images/entrata-logo.png"
               },
               {
                 name: "Buildium",
-                logo: getImagePath("/images/buildium-logo.png")
+                logo: "/images/buildium-logo.png"
               },
               {
                 name: "Real Page",
-                logo: getImagePath("/images/realpage-logo.png")
+                logo: "/images/realpage-logo.png"
               }
             ].map((software, index) => (
               <div
@@ -401,7 +400,7 @@ export default function Home() {
             <div className="md:col-span-2">
               <div className="bg-white rounded-xl p-4 inline-block mb-4">
                 <Image
-                  src={getImagePath("/images/logo.jpeg")}
+                  src="/images/logo.jpeg"
                   alt="GrossView Consultants"
                   width={180}
                   height={70}
