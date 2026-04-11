@@ -29,9 +29,7 @@ export default function ContactForm() {
     'Accounts Receivable',
     'Lease Administration',
     'Financial Reporting',
-    'Tax Preparation Support',
     'Yardi Implementation & Data Transition',
-    'Financial Services',
     'Other'
   ];
 
