@@ -103,10 +103,23 @@ India-based team with deep expertise in:
 
 ## Deployment Configuration
 - **Output**: Static export (`output: "export"` in next.config.ts)
-- **Base Path**: `/grossview-consultnts` in production (GitHub Pages)
+- **Base Path**: None (removed - using custom domain now)
 - **Images**: Unoptimized for static export, paths use `getImagePath()` utility
 - **CI/CD**: GitHub Actions workflow deploys to GitHub Pages on push to `main`
-- **URL**: https://ronakneema.github.io/grossview-consultnts/
+- **Primary URL**: https://www.grossviewconsultants.com (via GoDaddy + GitHub Pages)
+- **GitHub Pages URL**: https://ronakneema.github.io/grossview-consultnts/ (legacy)
+- **DNS Provider**: GoDaddy (CNAME for `www` → `ronakneema.github.io`)
+- **SSL/HTTPS**: GitHub Pages auto-provisioned SSL certificate
+
+### HTTPS/Security Issue
+- **Status**: Site currently showing as "Not Secure" 
+- **Root Cause**: HTTPS enforcement not enabled in GitHub Pages settings
+- **Fix Required**: 
+  1. Go to repository Settings → Pages
+  2. Ensure domain is set to `www.grossviewconsultants.com`
+  3. Enable "Enforce HTTPS" toggle
+  4. Verify GoDaddy DNS CNAME record points to `ronakneema.github.io`
+  5. Wait for SSL certificate auto-provisioning (~5-15 minutes)
 
 ## Real Estate Fields Served
 - **Commercial Real Estate** - Office buildings, retail centers, commercial properties
