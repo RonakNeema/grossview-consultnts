@@ -158,10 +158,18 @@ India-based team with deep expertise in:
 **Features**:
 - Modal popup with gradient header and close button
 - Fields: Name, Business, Phone, Timezone, Services (multi-select), Business Details, Comments
-- Multi-select dropdown for 12 services (stays collapsed, shows selected service names)
+- Multi-select dropdown for 10 services (stays collapsed, shows selected service names)
 - Form reset on cancel
-- mailto link generation with URL encoding
+- **Email integration**: EmailJS sends submissions to bfsipedia@gmail.com
 - Validation: requires at least one service selection
+- Success/error messages with auto-dismiss (3 seconds)
+
+**Email Service**:
+- **Provider**: EmailJS
+- **Free tier**: 200 emails/month (100 per day)
+- **Service ID**: service_9ufrsw8
+- **Template ID**: template_399ou3j
+- **Public Key**: TndYiSPPJ6cQiGDAe
 
 ### 4. Mobile Responsiveness Fixes
 
