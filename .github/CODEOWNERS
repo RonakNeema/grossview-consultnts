@@ -1,0 +1,9 @@
+# CODEOWNERS file - Auto-requests review from specified owners
+
+# All files in repo require review from @ronakneema
+* @ronakneema
+
+# Specific paths (optional - uncomment to add more granular rules)
+# app/ @ronakneema
+# public/ @ronakneema
+# .github/ @ronakneema
